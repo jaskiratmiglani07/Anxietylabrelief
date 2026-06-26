@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  
+  --color-bg-cosmos: #05050f;
+  --color-bg-aurora: #080a09;
+  --color-bg-ocean: #030a16;
+  --color-bg-forest: #060b07;
+  --color-bg-minimal: #0a0a0a;
+}
+
+:root {
+  /* Default: Cosmos */
+  --bg-color: #05050f;
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-color: #c084fc;
+  --accent-subtle: rgba(168, 85, 247, 0.15);
+  --glow-color: rgba(168, 85, 247, 0.2);
+  --particle-color: rgba(168, 85, 247, 0.4);
+}
+
+[data-theme="cosmos"] {
+  --bg-color: #05050f;
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-color: #c084fc;
+  --accent-subtle: rgba(168, 85, 247, 0.15);
+  --glow-color: rgba(168, 85, 247, 0.2);
+  --particle-color: rgba(168, 85, 247, 0.4);
+}
+
+[data-theme="aurora"] {
+  --bg-color: #080a09;
+  --text-color: #f4fbf7;
+  --text-muted: #8fa89b;
+  --accent-color: #55efc4;
+  --accent-subtle: rgba(85, 239, 196, 0.15);
+  --glow-color: rgba(85, 239, 196, 0.2);
+  --particle-color: rgba(85, 239, 196, 0.4);
+}
+
+[data-theme="ocean"] {
+  --bg-color: #030a16;
+  --text-color: #f0f7ff;
+  --text-muted: #93c5fd;
+  --accent-color: #38bdf8;
+  --accent-subtle: rgba(56, 189, 248, 0.15);
+  --glow-color: rgba(56, 189, 248, 0.2);
+  --particle-color: rgba(56, 189, 248, 0.4);
+}
+
+[data-theme="forest"] {
+  --bg-color: #060b07;
+  --text-color: #f2f7f3;
+  --text-muted: #a3b8a8;
+  --accent-color: #2ed573;
+  --accent-subtle: rgba(46, 213, 115, 0.15);
+  --glow-color: rgba(46, 213, 115, 0.15);
+  --particle-color: rgba(46, 213, 115, 0.35);
+}
+
+[data-theme="minimal-dark"] {
+  --bg-color: #0a0a0a;
+  --text-color: #ededed;
+  --text-muted: #737373;
+  --accent-color: #ffffff;
+  --accent-subtle: rgba(255, 255, 255, 0.08);
+  --glow-color: rgba(255, 255, 255, 0.1);
+  --particle-color: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  transition: background-color 1.5s cubic-bezier(0.25, 1, 0.5, 1), color 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-subtle);
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.5;
+  }
+}
+
+.breathing-ring {
+  animation: breathing 8s ease-in-out infinite;
+}
+
+/* Audio visualizer bar animations */
+@keyframes barGrow {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.visualizer-bar {
+  transform-origin: bottom;
+  animation: barGrow 1.2s ease-in-out infinite alternate;
+}
