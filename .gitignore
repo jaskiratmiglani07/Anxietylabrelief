@@ -28,3 +28,4 @@ pnpm-debug.log*
 skills-lock.json
 *.log
 
+.vercel
