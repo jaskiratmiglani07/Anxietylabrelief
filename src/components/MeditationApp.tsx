@@ -283,7 +283,7 @@ export const MeditationApp: React.FC = () => {
   // Share/Copy Reflection to Clipboard
   const shareReflection = () => {
     if (!reflection) return;
-    const shareText = `\"${activeWorry}\"\n\nReflection:\n${reflection.sentences.map(s => `• ${s}`).join('\n')}\n\nProcessed at Anxiety Relief Lab`;
+    const shareText = `\"${activeWorry}\"\n\nReflection:\n${reflection.sentences.map(s => `• ${s}`).join('\n')}\n\nProcessed at Unburden`;
     navigator.clipboard.writeText(shareText).then(() => {
       setCopiedLink(true);
       setTimeout(() => setCopiedLink(false), 2000);
@@ -333,7 +333,7 @@ export const MeditationApp: React.FC = () => {
         >
           <Compass className="w-5 h-5 text-neutral-400 group-hover:text-white transition-colors duration-500 group-hover:rotate-45" />
           <span className="font-serif tracking-widest text-xs uppercase font-light text-neutral-400 group-hover:text-white transition-colors duration-500">
-            anxiety relief lab
+            unburden
           </span>
         </button>
 
@@ -352,7 +352,7 @@ export const MeditationApp: React.FC = () => {
               <button 
                 onClick={() => setIsInfoOpen(true)}
                 className="p-2 rounded-full bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900/80 text-neutral-400 hover:text-white transition-all duration-300 cursor-pointer"
-                title="About anxiety relief lab"
+                title="About unburden"
                 aria-label="View about information"
               >
                 <Info className="w-4 h-4" />
@@ -867,7 +867,7 @@ export const MeditationApp: React.FC = () => {
 
               <div className="flex-1 overflow-y-auto space-y-4 pr-1 text-sm font-serif text-neutral-300 leading-relaxed font-light">
                 <p>
-                  <strong>Anxiety Relief Lab</strong> is a private digital sanctuary built to provide psychological distance from overwhelming worries, stress, and regrets.
+                  <strong>Unburden</strong> is a private digital sanctuary built to provide psychological distance from overwhelming worries, stress, and regrets.
                 </p>
                 <p>
                   It does not seek to solve your concerns, nor does it give superficial advice. Instead, it invites you to place your thought at the center of a slow, breathing-centered meditation, where you can watch it visually shrink while an AI reflects upon it through a lens of validation, scale, and gentle release.
