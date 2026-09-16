@@ -29,3 +29,6 @@ skills-lock.json
 *.log
 
 .vercel
+
+# private interview preparation
+PROJECT_INTERVIEW.md
