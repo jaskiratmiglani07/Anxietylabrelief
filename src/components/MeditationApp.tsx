@@ -108,7 +108,7 @@ export const MeditationApp: React.FC = () => {
     setIsAudioMuted(!isAudioMuted);
   };
 
-  // Start Meditation Session: Fetch from Groq API (fallback to local generator)
+  // Start Meditation Session: Fetch from OpenRouter API (fallback to local generator)
   const handleBegin = async () => {
     if (!worryInput.trim()) return;
 
@@ -876,7 +876,7 @@ export const MeditationApp: React.FC = () => {
                   <strong>Synthesized Soundscapes:</strong> Every sound effect you hear is procedurally synthesized inside your browser using the Web Audio API—rendering rain, wind, birds, space drones, and ambient piano without downloading any audio tracks.
                 </p>
                 <p>
-                  <strong>AI Reflections:</strong> Your thoughts are processed dynamically using the Groq Llama-3.3 API to create 8 custom, poetic reflection quotes. If offline, the client falls back to an built-in library of 11 emotional tracks.
+                  <strong>AI Reflections:</strong> Your thoughts are processed dynamically using the OpenRouter Llama-3.3 API to create 8 custom, poetic reflection quotes. If offline, the client falls back to an built-in library of 11 emotional tracks.
                 </p>
                 <p>
                   <strong>Privacy First:</strong> Your thoughts, worries, and saved reflections remain strictly inside your browser. No analytical tracking or server-side logging occurs.
